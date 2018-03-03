@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://gookoo.github.io/"/>
   <updated>2018-03-02T15:34:49.491Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://gookoo.github.io/</id>
   
   <author>
     <name>Goku</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>キャノン会社日本語しゃべれ音大会の発表記事</title>
-    <link href="http://yoursite.com/2018/03/02/%E6%97%A5%E6%9C%AC%E8%AA%9E%E8%AC%9B%E6%BC%94%E5%A4%A7%E4%BC%9A/"/>
-    <id>http://yoursite.com/2018/03/02/日本語講演大会/</id>
+    <link href="https://gookoo.github.io/2018/03/02/%E6%97%A5%E6%9C%AC%E8%AA%9E%E8%AC%9B%E6%BC%94%E5%A4%A7%E4%BC%9A/"/>
+    <id>https://gookoo.github.io/2018/03/02/日本語講演大会/</id>
     <published>2018-03-02T15:18:09.345Z</published>
     <updated>2018-03-02T15:34:49.491Z</updated>
     
@@ -40,8 +40,8 @@
   
   <entry>
     <title>ブログを始めて書く記事</title>
-    <link href="http://yoursite.com/2018/03/01/My%20First%20Blog/"/>
-    <id>http://yoursite.com/2018/03/01/My First Blog/</id>
+    <link href="https://gookoo.github.io/2018/03/01/My%20First%20Blog/"/>
+    <id>https://gookoo.github.io/2018/03/01/My First Blog/</id>
     <published>2018-03-01T15:33:40.761Z</published>
     <updated>2018-03-02T14:44:08.337Z</updated>
     
@@ -62,8 +62,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2017/11/14/the%20base%20of%20hexo/"/>
-    <id>http://yoursite.com/2017/11/14/the base of hexo/</id>
+    <link href="https://gookoo.github.io/2017/11/14/the%20base%20of%20hexo/"/>
+    <id>https://gookoo.github.io/2017/11/14/the base of hexo/</id>
     <published>2017-11-14T13:45:12.508Z</published>
     <updated>2017-11-14T13:45:12.508Z</updated>
     
