@@ -298,195 +298,57 @@
 
 <!-- Layouts -->
 
-    <!-- Post Module -->
-    <div class="material-post_container">
+    <!-- Tags Cloud -->
+    <style>
+    #bottom{
+        position: relative;
+    }
 
-        <div class="material-post mdl-grid">
-            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+    @media screen and (max-width: 480px) {
+        .material-tagscloud{
+            margin: 6em 2em 0;
+        }
+    }
 
-                <!-- Post Header(Thumbnail & Title) -->
-                
-    <!-- Paradox Post Header -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script type="text/ls-javascript" id="post-thumbnail-script">
-    var randomNum = Math.floor(Math.random() * 19 + 1);
+    .material-tagscloud a{
+        text-decoration:none;
+        padding: 1px 9px;
+        margin: 9px 1px;
+        line-height: 40px;
+        white-space: nowrap;
+        transition: .6s;
+        opacity: .85;
+    }
 
-    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
+    .material-tagscloud a:hover{
+        transition: .6s;
+        opacity: 1;
+        background: #FAFAFA;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+</style>
+
+<div class=" material-tagscloud">
+    <div class="material-post mdl-grid">
+        <a href="/tags/日语演讲稿/" style="font-size: 16px; color: #757575">日语演讲稿</a>
+    </div>
+</div>
+
+
+<script type="text/ls-javascript" id="page-tagcloud-script">
+    var adjustFooter = function() {
+        if( ($('#bottom').offset().top + $('#bottom').outerHeight() ) < $(window).height() ) {
+            var footerBottom = $(window).height() - $('#bottom').outerHeight() - $('#bottom').offset().top;
+            $('#bottom').css('bottom', '-' + footerBottom + 'px');
+        }
+    };
+
+    $(document).ready(function() {
+        adjustFooter();
+    });
 </script>
 
-        
-    
-            <p class="article-headline-p">
-                标签云
-            </p>
-        </div>
 
-
-
-
-
-                
-                    <!-- Paradox Post Info -->
-                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-
-    <!-- Author Avatar -->
-    <div id="author-avatar">
-        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
-    </div>
-    <!-- Author Name & Date -->
-    <div>
-        <strong>Goku</strong>
-        <span>3月 11, 2018</span>
-    </div>
-
-    <div class="section-spacer"></div>
-
-    <!-- Favorite -->
-    <!--
-        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
-            <i class="material-icons" role="presentation">favorite</i>
-            <span class="visuallyhidden">favorites</span>
-        </button>
-    -->
-
-    <!-- Qrcode -->
-    
-        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-    <i class="material-icons" role="presentation">devices other</i>
-    <span class="visuallyhidden">devices other</span>
-</button>
-<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
-    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
-    
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACYklEQVR42u3aQXLDMAgF0Nz/0u0BOk4/YFG3fVp5Jo7N80JigNfHn14vPDw8PDw8PDy8h/Fe8Yoe/eXO/Gn5f98/DQ8PD2+Hd1fQvQ+Ug6PY8PDw8BZ5VwFd3XP161UQvYMhjw0PDw/vybxks04w748QPDw8vP/Ay4+TyRPw8PDwnsPLX/lNITW+J79eqrXg4eHhxby8CLt/vdrfw8PDwwt45ZGmt8dAXpatptqFCPHw8PAO8/KNuDdS0Cv+9uLBw8PD2+H1NvHeQFWerCfgqBiBh4eHd4DXbDKN7+l9mqgJh4eHh3eYl2/BSeqch9JL30cpNR4eHt4BXnJgzAu+vbfkBQ48PDy807wkpU4S7t5g1qSFVpiMwMPDwzvAmxdY34fVYzSTdTw8PLzDvLxgWm19VccLct6oGIGHh4d3gJcfG5MNvTpSUBj8wsPDw/shXtLUr2Lyf+VtOTw8PLx93r2h9JLvfDQ2Oirw8PDwDvOqiW+v0HAvEg8PD+8JvLxYkBdt8xGE/Bi4rQGGh4eHN+BN2lr5sdEbBWg22PDw8PBWeDkm2aar5Yw8lS+n1Hh4eHjrvGqDv5eCV0cQCkNXeHh4eCu8XpJdbfnf1YQrp9R4eHh4Y1519cYIeql2/gnw8PDwNnnVdtRdhd1eGSI6ZvDw8PBWeL2BgFGxtTpKlafaeHh4eIu8SXOrly73RrKatRY8PDy8x/CqYVWT6aQlhoeHh/dbeL3ib3I9ehceHh7eIq/a9Kp+mt5wQF7gwMPDw9vkVUsA87ZWYRQgGCbAw8PD2+T9vYWHh4eHh4eHh/eA9QmeJ+05GSVijQAAAABJRU5ErkJggg==">
-    
-</ul>
-
-    
-
-    <!-- Tags (bookmark) -->
-    
-
-    <!-- Share -->
-    
-        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-    <i class="material-icons" role="presentation">share</i>
-    <span class="visuallyhidden">share</span>
-</button>
-<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
-    
-
-    
-        
-            <!-- Busuanzi Views -->
-            <a class="post_share-link" href="#">
-                <li class="mdl-menu__item">
-                    <span id="busuanzi_container_page_pv">
-                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
-                    </span>
-                </li>
-            </a>
-        
-    
-
-    <!-- Share Weibo -->
-    
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=标签云&url=https://gookoo.github.io/tagcloud/index.html&pic=https://gookoo.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
-            <li class="mdl-menu__item">
-                分享到微博
-            </li>
-        </a>
-    
-
-    <!-- Share Twitter -->
-    
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=标签云&url=https://gookoo.github.io/tagcloud/index.html&via=Goku" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 Twitter
-            </li>
-        </a>
-    
-
-    <!-- Share Facebook -->
-    
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://gookoo.github.io/tagcloud/index.html" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 Facebook
-            </li>
-        </a>
-    
-
-    <!-- Share Google+ -->
-    
-
-    <!-- Share LinkedIn -->
-    
-
-    <!-- Share QQ -->
-    
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Gokuの博客&title=标签云&summary=&pics=https://gookoo.github.io/img/favicon.png&url=https://gookoo.github.io/tagcloud/index.html" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 QQ
-            </li>
-        </a>
-    
-
-    <!-- Share Telegram -->
-    
-</ul>
-
-    
-</div>
-
-                
-
-                <!-- Post Content -->
-                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
-    
-        
-        
-                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
-                    <p><strong>
-                         
-                            本文基于<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">国际创作共享协议4.0</a>创作，转载或使用请遵守本协议。
-                        </strong>
-                        <br>
-                        <strong>本文链接：</strong><a href="https://gookoo.github.io/tagcloud/index.html">https://gookoo.github.io/tagcloud/index.html</a>
-                    </p>
-                </blockquote>
-        
-    
-
-    
-</div>
-
-
-                
-
-                <!-- Post Comments -->
-                
-                    
-                
-            </div>
-
-            <!-- Post Prev & Next Nav -->
-            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
-    <!-- Prev Nav -->
-    
-
-    <!-- Section Spacer -->
-    <div class="section-spacer"></div>
-
-    <!-- Next Nav -->
-    
-</nav>
-
-        </div>
-    </div>
 
 
 
