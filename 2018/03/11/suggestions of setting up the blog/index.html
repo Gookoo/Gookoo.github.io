@@ -39,7 +39,7 @@
     
     <title>
         
-            About | 
+            Hexo博客搭建注意事项 | 
         
         Gokuの博客
     </title>
@@ -50,8 +50,8 @@
     <meta name="format-detection" content="telephone=no"/>
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="Goku">
-    <meta name="description" itemprop="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" itemprop="description" content="Hexo博客搭建注意事项">
+    <meta name="keywords" content=",Hexo博客">
 
     <!-- Import lsloader -->
     <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(window.oldVersion){var remove=window.oldVersion.reduce(function(p,c){return p||data.indexOf("/*"+c+"*/")!==-1},false);if(remove){lsloader.removeLS(key)}}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload,isJs){if(typeof cssonload==="boolean"){isJs=cssonload;cssonload=undefined}isJs=isJs||false;cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload,isJs);return}code=code.split(versionString)[1];if(isJs){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload,isJs)}};lsloader.requestResource=function(name,path,cssonload,isJs){var that=this;if(isJs){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else{this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
@@ -237,29 +237,62 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://gookoo.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="About | Gokuの博客">
+    <meta property="og:title" content="Hexo博客搭建注意事项 | Gokuの博客">
     <meta property="og:image" content="https://gookoo.github.io/img/favicon.png" />
-    <meta property="og:description" content="">
-    
+    <meta property="og:description" content="Hexo博客搭建注意事项">
+    <meta property="og:article:tag" content="Hexo博客"> 
 
+    
+        <meta property="article:published_time" content="Sun Mar 11 2018 20:05:00 GMT+0800" />
+        <meta property="article:modified_time" content="Sun Mar 11 2018 23:11:17 GMT+0800" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="About | Gokuの博客">
-    <meta name="twitter:description" content="">
+    <meta name="twitter:title" content="Hexo博客搭建注意事项 | Gokuの博客">
+    <meta name="twitter:description" content="Hexo博客搭建注意事项">
     <meta name="twitter:image" content="https://gookoo.github.io/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://gookoo.github.io" />
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://gookoo.github.io/about/index.html" />
+        <link rel="canonical" href="https://gookoo.github.io/2018/03/11/suggestions of setting up the blog/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://gookoo.github.io/2018/03/11/suggestions of setting up the blog/index.html",
+    "headline": "Hexo博客搭建注意事项",
+    "datePublished": "Sun Mar 11 2018 20:05:00 GMT+0800",
+    "dateModified": "Sun Mar 11 2018 23:11:17 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Goku",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "走るなら 自分の道を"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Gokuの博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",Hexo博客",
+    "description": "Hexo博客搭建注意事项",
+}
+</script>
 
 
     
@@ -295,6 +328,39 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Hexo搭建思路"><span class="post-toc-number">2.</span> <span class="post-toc-text">Hexo搭建思路</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#环境配置"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">环境配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Hexo安装"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Hexo安装</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GitHub仓库构建"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">GitHub仓库构建</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#主题配置"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">主题配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#主题优化"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">主题优化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#功能模块添加"><span class="post-toc-number">2.5.1.</span> <span class="post-toc-text">功能模块添加</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#写博客"><span class="post-toc-number">3.</span> <span class="post-toc-text">写博客</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#同步博客"><span class="post-toc-number">4.</span> <span class="post-toc-text">同步博客</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#结束语"><span class="post-toc-number">5.</span> <span class="post-toc-text">结束语</span></a></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
@@ -321,7 +387,7 @@
         
     
             <p class="article-headline-p">
-                About
+                Hexo博客搭建注意事项
             </p>
         </div>
 
@@ -340,7 +406,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Goku</strong>
-        <span>3月 09, 2018</span>
+        <span>3月 11, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -362,13 +428,22 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAAB5ElEQVR42u3aS3LDIBAFQN3/0skBnOA3jCRb0KxckYLozRTzOX6WWAcGBgYGBgYGxtcwjnj9sdHL0+TN//6regYMDIzdGG9C2+sW8YGSb02eAQMDY0vG+HAJKT/0eP8klGNgYGBUGeMjzu2AgYGB0WEUUs34HQwMDIyzktikDDf35q25OAYGxgMZeRi97vet/Q0MDIxHMcojDpeV4W6dGcHAwHgUIw98OTIpuuVBHwMDA6M6BlH9yzG1ykksBgbG0ozO9S55Otf4POFqiIGBsRAjwSQXwbmnORIDA2NnxuS1LE5HqzvkIRgDA2M3xjjhrF4W+wntCUksBgbGQoy8QJ8Ph1Wbl9VGAgYGxm6McuOwmJTmw6l5qMXAwNiNkYS8/Oj5BbEagjEwMHZmVIvy+XH7Seybk2BgYGAEH86pc83OkwMuBgbGEozOcauNz05LAAMDY2fGOKGtjmjkX5lsP2BgYGzDqK7qqETnmoiBgYExVwLrlNKSgF5opmJgYGzGyC92c42E/mgFBgYGxjjYJcExL7RdnotjYGBgxG2DvPSWp7IYGBgYZwXcaFSiuD5wNcTAwPhKRrUBOS6f9UcxWsMWGBgYyzE6Zf3qxS4f3biwv4GBgfEoxnMXBgYGBgYGBsZH1y+8pKFez/MDBgAAAABJRU5ErkJggg==">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC0UlEQVR42u3aQXICMQwEQP7/6eQBhGUkmdRi955SKbJ2m4OikR8/Rz4PbGxsbGxsbGxs7FuyH/Hz/Fev3pP/5vqdLwG9PWNjY2NvzU6WSZZ//vyrn1+9P2H09oyNjY19AnvCqJara2Rv3eujwcbGxsa+bkLytiRpSPJGCBsbGxu7x84DoPzg8sgJGxsbG3sSKiXFaRU1L5kfz9KwsbGxb8/Oh6b3+flf59vY2NjYN2ZXn7yA5dtNylK1+fnjDdjY2NibsqvXZfKgZ9LM9EYIbw4OGxsbe1N2UqLmhap3QSf5TbJzbGxs7L3ZeanID6U37u0Vv8IXg42NjX0YOylUvbYkf//kqhA2Njb2aexqlJ+XpTz0yRueXiCFjY2NvSu7+k//5DOrimVv9IuNjY29KzuP9ZOCMb+4mRSzZJVy3cbGxsb+Wva8DegNeifvbMZh2NjY2Aew5wvkEc/1cc+PfsFNJWxsbOwvZFfj+7zBmJS3yd6wsbGxz2FXI/5e2FQ96GpJKw96sbGxsbdg5yUkifJ7pKQslRsPbGxs7MPYVXy12FSP7+OhEjY2NvZ27OQVvTFAr8npNS1vvhhsbGzsTdm9gCaK48fNRh5XLb58iY2Njf3l7FUDgx5p7VeCjY2NfQ67949+L/rJYcmKeWODjY2NvSs7j/WTreeDh+paC65mYmNjY2/N7gX3hUCnNTzId9gsYNjY2NjbsattSQ7ulcwkwGqOB7CxsbE3ZT8WPclhTQa6+bgXGxsb+wR29ekVpLUlqjeKwMbGxt6Vvaos9Ua2edCffH7BoBcbGxv7a9l50ZofzeeOuFzAsLGxsbdj55dpVpWcVcFWtAo2NjY2dnEwnIdHveMoXxvCxsbGxi4GQMnVnx61OUjGxsbGPoCdD3eTtqS63WqYVS6f2NjY2FuzJ8HNZKy7akic7AQbGxt7V/Y5DzY2NjY2NjY2NvZtnl9lkwttUeOxrwAAAABJRU5ErkJggg==">
     
 </ul>
 
     
 
     <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Hexo博客/">Hexo博客</a>
+    </ul>
     
 
     <!-- Share -->
@@ -395,7 +470,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=About&url=https://gookoo.github.io/about/index.html&pic=https://gookoo.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Hexo博客搭建注意事项&url=https://gookoo.github.io/2018/03/11/suggestions of setting up the blog/index.html&pic=https://gookoo.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -404,7 +479,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=About&url=https://gookoo.github.io/about/index.html&via=Goku" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Hexo博客搭建注意事项&url=https://gookoo.github.io/2018/03/11/suggestions of setting up the blog/index.html&via=Goku" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -413,7 +488,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://gookoo.github.io/about/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://gookoo.github.io/2018/03/11/suggestions of setting up the blog/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -428,7 +503,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Gokuの博客&title=About&summary=&pics=https://gookoo.github.io/img/favicon.png&url=https://gookoo.github.io/about/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Gokuの博客&title=Hexo博客搭建注意事项&summary=&pics=https://gookoo.github.io/img/favicon.png&url=https://gookoo.github.io/2018/03/11/suggestions of setting up the blog/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -447,23 +522,27 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h2 id="日本語："><a href="#日本語：" class="headerlink" title="日本語："></a>日本語：</h2><h3 id="Gokuのことに関する"><a href="#Gokuのことに関する" class="headerlink" title="Gokuのことに関する"></a>Gokuのことに関する</h3><p>武漢科技大学を卒業し  </p>
-<p>日本語とアニメが好き  </p>
-<p>撮影とフィットネスも</p>
-<p>読書と技の勉強にも、夢中になり  </p>
-<p>俺がいるところでは、笑顔いっぱいになり　　</p>
-<p>バカみたいですけど  </p>
-<p>明るい人である  </p>
-<h2 id="中国语："><a href="#中国语：" class="headerlink" title="中国语："></a>中国语：</h2><h3 id="关于Goku"><a href="#关于Goku" class="headerlink" title="关于Goku"></a>关于Goku</h3><p>毕业于武科大  </p>
-<p>喜欢日语和动漫  </p>
-<p>还有摄影和健身</p>
-<p>沉迷于读书和搞事情  </p>
-<p>有我在的地方就会有欢笑　　</p>
-<p>傻乎乎却很开朗  </p>
-<h2 id="マトメ"><a href="#マトメ" class="headerlink" title="マトメ　　"></a>マトメ　　</h2><p>自分の大好きなものをここに書き、そして発表します。それは人生の素晴らしいことであり、何より面白いです。　　</p>
-<p>なお、自分の得たものを他人に伝えて、自分も成長できることになりました。それだけでいいと思います。　　
-　　</p>
-<p><img src="http://www.8ciyuan.cn/uploads/allimg/170313/1-1F313153531.jpg" alt=""></p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>  在好友的推荐下，我搭起了博客，不懂前端，不想学代码，就这样靠着理解和套用简单的代码慢慢将博客修改得更适合自己喜欢的简约风格。在这十天左右的时间里，断断续续有事没事地慢慢修改和完善，遇到了不少的困难，走了不少的弯路，究其原因，可以归结为一个问题没有解决又想到下一个问题，再又想到了另外一个问题，导致没有解决的问题变多了，问题之间的联系比较混乱。最终下定决心按照需求先后解决一个一个问题。并尝试着进行了一点总结。顺便可以给喜欢玩博客的童鞋做一下参考。  </p>
+<p><img src="1.jpg" alt="">  </p>
+<h2 id="Hexo搭建思路"><a href="#Hexo搭建思路" class="headerlink" title="Hexo搭建思路"></a><strong>Hexo搭建思路</strong></h2><p>关于博客的搭建，网上教程一大堆，这里就不在赘述了。  博客搭建☞<a href="https://www.jianshu.com/p/956c44c87fb1" target="_blank">点我</a> </p>
+<h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a><strong>环境配置</strong></h3><p>配置环境用于搭建博客以及后续的优化和内容更新，需要注意的是去版本尽量去官网下载最新的，我上次更新博客失败，后来查到和git版本有关，更新了git版本后才更新成功。</p>
+<h3 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a><strong>Hexo安装</strong></h3><p>hexo是博客框架，在上述搭建好的环境中，将支持的类型的文件转换成静态Web页面发布博客。</p>
+<h3 id="GitHub仓库构建"><a href="#GitHub仓库构建" class="headerlink" title="GitHub仓库构建"></a><strong>GitHub仓库构建</strong></h3><p>创建GitHub仓库用于博客内容的寄存，博客内容是本地内容转换成Web页面后的内容。接着通过创建GitHub仓库的ssh key，它是连通本地内容和GitHub仓库的钥匙。在站点配置文件_config.yml（注意区分站点配置文件和主题配置文件）配置ssh key时注意区分输入的是博客注册邮箱还是博客的网址。</p>
+<h3 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a><strong>主题配置</strong></h3><p>博客搭建好了以后，就需要安装自己喜欢的主题了，安装主题的时候记得把默认的主题复制出来备份，如果自己下载的主题没有安装成功还可以把原来默认的主题再替换进去。  主题配置☞<a href="https://www.jianshu.com/p/469e985288b3?from=jiantop.com" target="_blank">点我</a> </p>
+<h3 id="主题优化"><a href="#主题优化" class="headerlink" title="主题优化"></a><strong>主题优化</strong></h3><p>下载的主题里面默认很多模块没有开启，或者很多东西你不需要，或者很多东西你要改变成自己喜欢的样式。<br>比如说【标签云】模块，【图册】模块，【时间】轴模块，【关于我】模块，【友情链】模块等，以及分享功能，评论系统，阅读量统计等。要求高的还可以自己添加音乐播放插件，可以动的看板萌妞小妹等。下面逐一说明。  </p>
+<h4 id="功能模块添加"><a href="#功能模块添加" class="headerlink" title="功能模块添加"></a><strong>功能模块添加</strong></h4><p>【标签云】模块，【图册】模块，【时间轴】模块，【关于我】模块，【友情链】模块都需要各自建一个页面，这一点是相同的，各自之间实现的方法不一样。  </p>
+<p>【关于我】模块是在建好的页面的文件夹里面直接写.md文件的，转换后是一篇博文的界面。  【关于我】教程☞<a href="https://baoyuzhang.github.io/2017/05/12/%E3%80%90Hexo%E6%90%AD%E5%BB%BA%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2%E5%85%A8%E7%BA%AA%E5%BD%95%E3%80%91%EF%BC%88%E4%B8%89%EF%BC%89%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" target="_blank">点我</a>。  其中，只需要看关于新建about部分的就可以了，可以触类旁通。无关的内容看多了会让你怀疑人生的(→_→）</p>
+<p>【图册】模块需要图片集成在你的相册页面里，实现方法有两种。一种是本地图片同步到GitHub仓库；另一种是靠图床获取外部链接实现（外部链接不同于网盘的分享链接）。还需要获取API拿到key。有的图床需要注册还要实名认证，我果断放弃了，国外的大都需要自建梯子出去。 PS:梯子，你懂的哈(→<em>→）。国外的ins的API马上要关闭了，目前在尝试flickr中，试了好久还是没有成功~ 此时我想起了一句名言：世上无难事，只要肯放弃(→</em>→）  【图册】教程点我</p>
+<p>【时间轴】主题中包涵相关的功能，只要按教程开启就可以了。 </p>
+<p>【友情链】就不添加了，大神到处是，如果都加入到友情链，估计人口爆满，让人眼花缭乱，心旷神怡啊(→_→）　【友情链】教程，没有。</p>
+<p>分享功能，评论系统，阅读量统计等，在主题配置文件中开启就可以了。   </p>
+<p>以上的各个模块的怎么实现，看官☞<a href="http://www.360doc.com/content/17/0712/19/25356749_670867725.shtml" target="_blank">点我</a> </p>
+<p>最后，可以动的看板萌妞小妹，看起来好难，实际也很难，放个链接有兴趣自己钻研~   看官☞<a href="https://imjad.cn/archives/lab/add-dynamic-poster-girl-with-live2d-to-your-blog-01" target="_blank">点我</a>   </p>
+<h2 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a><strong>写博客</strong></h2><p>博客需要写了以后通过hexo命令发出去，写博客遵循的格式是<a href="http://xianbai.me/learn-md/index.html" target="_blank">markdown语言格式</a>，写作工具比较多，我用的是MarkdownPad2，可以预览效果。<br>关于发博客，看官☞<a href="http://blog.csdn.net/qq_36099238/article/details/54576089" target="_blank">点我</a>  </p>
+<h2 id="同步博客"><a href="#同步博客" class="headerlink" title="同步博客"></a><strong>同步博客</strong></h2><p>关于多设备同步博客，有需要的可以后续学习，如果电脑被偷了或者爆炸了，或者怀旧重新装了一个windowsXP的系统，这个同步博客的操作绝壁ひつよう啊~<br>关于多设备同步，看官☞<a href="https://www.zhihu.com/question/21193762" target="_blank">点我</a> </p>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a><strong>结束语</strong></h2><p>接触到了博客，发现博客还挺麻烦，但是会越来越好用，越用越快，帮助我记录生活点滴，总结知识，共享成果。  </p>
+<p>以上です、質問があれば、メールで連絡してください。  </p>
+<p><img src="2.jpg" alt="">  </p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
@@ -472,7 +551,7 @@
                             本文基于<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">国际创作共享协议4.0</a>创作，转载或使用请遵守本协议。
                         </strong>
                         <br>
-                        <strong>本文链接：</strong><a href="https://gookoo.github.io/about/index.html">https://gookoo.github.io/about/index.html</a>
+                        <strong>本文链接：</strong><a href="https://gookoo.github.io/2018/03/11/suggestions of setting up the blog/">https://gookoo.github.io/2018/03/11/suggestions of setting up the blog/</a>
                     </p>
                 </blockquote>
         
@@ -499,6 +578,14 @@
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2018/03/01/My First Blog/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
@@ -708,6 +795,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
