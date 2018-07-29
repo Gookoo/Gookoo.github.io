@@ -16,15 +16,13 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Gokuの博客">
-<meta property="og:url" content="https://gookoo.github.io/photos/gallery1.html">
+<meta property="og:title" content="标签云">
+<meta property="og:url" content="https://gookoo.github.io/tags/index.html">
 <meta property="og:site_name" content="Gokuの博客">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://farm5.staticflickr.com/4399/36519742390_5efc6534d6_z.jpg">
-<meta property="og:updated_time" content="2018-03-17T15:33:47.834Z">
+<meta property="og:updated_time" content="2018-03-11T06:36:05.629Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Gokuの博客">
-<meta name="twitter:image" content="https://farm5.staticflickr.com/4399/36519742390_5efc6534d6_z.jpg">
+<meta name="twitter:title" content="标签云">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +54,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Gokuの博客</title>
+<title>标签云 | Gokuの博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -268,11 +266,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="tags-" class="article article-type-tags" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/photos/gallery1.html" class="article-date">
-      <time datetime="2018-03-18T13:41:23.701Z" itemprop="datePublished">2018-03-18</time>
+      <a href="/tags/index.html" class="article-date">
+      <time datetime="2018-03-11T06:36:05.629Z" itemprop="datePublished">2018-03-11</time>
 </a>
 
 
@@ -282,6 +280,24 @@
     
       <input type="hidden" class="isFancy" />
     
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      标签云
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
     
     <div class="article-entry" itemprop="articleBody">
       
@@ -303,6 +319,66 @@
     #container .article .article-title { padding: 0; }
 </style>
 
+
+    <!-- Tag Cloud Page -->
+    <hr>
+<br>
+<ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo博客/">Hexo博客</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/搜索技能/">搜索技能</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/日语学习/">日语学习</a><span class="category-list-count">1</span></li></ul>
+
+<p class="count"></p>
+
+<div class="tags">
+    <a href="/tags/Hexo博客基本操作和语法/" style="font-size: 16px; color: #808080">Hexo博客基本操作和语法</a> <a href="/tags/Hexo博客搭建/" style="font-size: 16px; color: #808080">Hexo博客搭建</a> <a href="/tags/搜索能力进阶/" style="font-size: 16px; color: #808080">搜索能力进阶</a> <a href="/tags/日语演讲稿/" style="font-size: 16px; color: #808080">日语演讲稿</a>
+</div>
+<style>
+    .category-list li{
+        display: inline-block;
+        margin: 0 1em .5em 0;
+        padding: 4px;
+        border: 1px solid lightgray;
+        font-size: 1.2rem;
+    }
+    .category-list a { color: gray; }
+    .category-list-item:hover a {
+        color: gray;
+        text-decoration: none;
+    }
+    .category-list-count {
+        margin-left: 2px;
+        font-size: .9rem;
+    }
+    .article-entry ul li:before{ display: none; }
+    .article-inner { text-align: center; }
+    .tags {
+        max-width: 42em;
+        margin: 2em auto;
+        margin-top: 0em;
+    }
+    .tags a {
+        margin-right: 1em;
+        line-height: 65px;
+        border-bottom: 1px solid gray;
+        white-space: nowrap;
+        transition: border-bottom .5s;
+    }
+    .tags a:hover {
+        border-bottom: 3px dotted gray;
+        text-decoration: none;
+    }
+    #count > span {
+        margin: auto .2em;
+        font-weight: bold;
+    }
+</style>
+
+<!-- Count tags and categories -->
+<p id="count">
+        已有<span><script>document.write($(".category-list-item").length)</script></span>个分类，
+        共计<span><script>document.write($(".tags > a").length)</script></span>个标签
+</p>
+<script>
+    $('#count').appendTo('.count');
+</script>
 
           
         
@@ -333,7 +409,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"　| Gokuの博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"标签云　| Gokuの博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -352,8 +428,8 @@
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function(){
-            this.page.url = 'https://gookoo.github.io/photos/gallery1.html';
-            this.page.identifier = 'photos/gallery1.html';
+            this.page.url = 'https://gookoo.github.io/tags/index.html';
+            this.page.identifier = 'tags/index.html';
         };
         var loadComment = function(){
             var d = document, s = d.createElement('script');
