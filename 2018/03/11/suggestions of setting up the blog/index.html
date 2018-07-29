@@ -82,7 +82,9 @@
 </script>
 
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
 
 
 
@@ -143,11 +145,11 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>Menu</li>
-                        <li>Tags</li>
+                        <li>菜單</li>
+                        <li>標籤</li>
                         
                         
-                        <li>About Me</li>
+                        <li>關於我</li>
                         
                     </ul>
                 </div>
@@ -259,7 +261,7 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
       <div class="body-wrap"><article id="ew-suggestions of setting up the blog" class="article article-type-ew" itemscope itemprop="blogPost">
   
@@ -334,17 +336,17 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2018/03/11/suggestions of setting up the blog/">Hexo博客搭建注意事项</a></p>
-        <p><span>Author:</span><a href="/" title="Back to Homepage">Goku</a></p>
-        <p><span>Created:</span>2018-03-11, 20:05:00</p>
-        <p><span>Updated:</span>2018-04-15, 11:23:21</p>
+        <p><span>本文標題:</span><a href="/2018/03/11/suggestions of setting up the blog/">Hexo博客搭建注意事项</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主頁">Goku</a></p>
+        <p><span>發布時間:</span>2018-03-11, 20:05:00</p>
+        <p><span>最後更新:</span>2018-04-15, 11:23:21</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2018/03/11/suggestions of setting up the blog/" title="Hexo博客搭建注意事项">https://gookoo.github.io/2018/03/11/suggestions of setting up the blog/</a>
-            <span class="copy-path" data-clipboard-text="From https://gookoo.github.io/2018/03/11/suggestions of setting up the blog/　　By Goku" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>原始鏈接:</span><a class="post-url" href="/2018/03/11/suggestions of setting up the blog/" title="Hexo博客搭建注意事项">https://gookoo.github.io/2018/03/11/suggestions of setting up the blog/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://gookoo.github.io/2018/03/11/suggestions of setting up the blog/　　作者: Goku" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+            <span>許可協議:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"姓名標示-非商業性-相同方式分享 4.0 國際"</a> 轉載請保留原文鏈接及作者。
         </p>
     </div>
 
@@ -371,7 +373,7 @@
 </article>
 
     <div id="toc" class="toc-article">
-        <strong class="toc-title">Contents</strong>
+        <strong class="toc-title">文章目錄</strong>
         
             <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo搭建思路"><span class="toc-number">2.</span> <span class="toc-text">Hexo搭建思路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#环境配置"><span class="toc-number">2.1.</span> <span class="toc-text">环境配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo安装"><span class="toc-number">2.2.</span> <span class="toc-text">Hexo安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GitHub仓库构建"><span class="toc-number">2.3.</span> <span class="toc-text">GitHub仓库构建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主题配置"><span class="toc-number">2.4.</span> <span class="toc-text">主题配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主题优化"><span class="toc-number">2.5.</span> <span class="toc-text">主题优化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#功能模块添加"><span class="toc-number">2.5.1.</span> <span class="toc-text">功能模块添加</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写博客"><span class="toc-number">3.</span> <span class="toc-text">写博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#同步博客"><span class="toc-number">4.</span> <span class="toc-text">同步博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">5.</span> <span class="toc-text">结束语</span></a></li></ol>
         
@@ -387,10 +389,10 @@
         }
     </style>
 
-    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+    <input type="button" id="tocButton" value="隱藏目錄"  title="點擊按鈕隱藏或者顯示文章目錄">
 
     <script>
-        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+        yiliaConfig.toc = ["隱藏目錄", "顯示目錄", !!"false"];
     </script>
 
 
@@ -451,15 +453,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/04/15/how to search what you want/" title="Pre: 如何提高搜索能力">
+            <a href="/2018/04/15/how to search what you want/" title="上一篇: 如何提高搜索能力">
                 <i class="fa fa-angle-left"></i>
             </a>
         
 
-        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/03/03/My First Blog/" title="Next: ブログを始めて書く記事">
+            <a href="/2018/03/03/My First Blog/" title="下一篇: ブログを始めて書く記事">
                 <i class="fa fa-angle-right"></i>
             </a>
         
@@ -482,14 +484,14 @@
                 2016-2018 Goku
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="快速、簡潔且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="簡而不減 Hexo 雙欄博客主題  v">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="本站到訪數"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -498,7 +500,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="本頁閱讀量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -531,9 +533,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window
