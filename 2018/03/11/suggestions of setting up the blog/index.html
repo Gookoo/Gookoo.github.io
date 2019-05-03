@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Goku" />
+
+
+
+<meta name="description" content="Hexo博客搭建注意事项">
+<meta name="keywords" content="Hexo博客搭建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客搭建注意事项">
+<meta property="og:url" content="https://gookoo.github.io/2018/03/11/suggestions of setting up the blog/index.html">
+<meta property="og:site_name" content="Gokuの博客">
+<meta property="og:description" content="Hexo博客搭建注意事项">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://gookoo.github.io/posts_img/1.jpg">
+<meta property="og:image" content="https://gookoo.github.io/posts_img/2.jpg">
+<meta property="og:updated_time" content="2018-04-15T03:23:21.485Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo博客搭建注意事项">
+<meta name="twitter:description" content="Hexo博客搭建注意事项">
+<meta name="twitter:image" content="https://gookoo.github.io/posts_img/1.jpg">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Gokuの博客" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/img/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>Hexo博客搭建注意事项 | Gokuの博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Goku</a></h1>
+        </hgroup>
+
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="true" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                            <li><a href="/photos/">相册集</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:goku.karoter@hotmail.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" href="https://weibo.com/u/3943187986" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/Gookoo" title="GitHub"></a>
+                            
+                                <a class="fa bilibili" href="https://space.bilibili.com/16161226" title="bilibili"></a>
+                            
+                                <a class="fa Twitter" href="https://twitter.com/kakarroter" title="Twitter"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo博客基本操作和语法/">Hexo博客基本操作和语法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo博客搭建/">Hexo博客搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/搜索能力进阶/">搜索能力进阶</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/日语演讲稿/">日语演讲稿</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+
+                
+                
+                <section class="switch-part switch-part3">
+                
+                    <div id="js-aboutme">走るなら、自分の道を</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Goku</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Goku</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                    <li><a href="/photos/">相册集</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:goku.karoter@hotmail.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="https://weibo.com/u/3943187986" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/Gookoo" title="GitHub"></a>
+                            
+                                <a class="fa bilibili" target="_blank" href="https://space.bilibili.com/16161226" title="bilibili"></a>
+                            
+                                <a class="fa Twitter" target="_blank" href="https://twitter.com/kakarroter" title="Twitter"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="ew-suggestions of setting up the blog" class="article article-type-ew" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/03/11/suggestions of setting up the blog/" class="article-date">
+      <time datetime="2018-03-11T12:05:00.000Z" itemprop="datePublished">2018-03-11</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo博客搭建注意事项
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Hexo博客/">Hexo博客</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo博客搭建/">Hexo博客搭建</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>&emsp;&emsp;在好友的推荐下，我搭起了博客，不懂前端，不想学代码，就这样靠着理解和套用简单的代码慢慢将博客修改得更适合自己喜欢的简约风格。在这十天左右的时间里，断断续续有事没事地慢慢修改和完善，遇到了不少的困难，走了不少的弯路，究其原因，可以归结为一个问题没有解决又想到下一个问题，再又想到了另外一个问题，导致没有解决的问题变多了，问题之间的联系比较混乱。最终下定决心按照需求先后解决一个一个问题。并尝试着进行了一点总结。顺便可以给喜欢玩博客的童鞋做一下参考。  </p>
+<p><img src="/posts_img/1.jpg" alt="">  </p>
+<h2 id="Hexo搭建思路"><a href="#Hexo搭建思路" class="headerlink" title="Hexo搭建思路"></a><strong>Hexo搭建思路</strong></h2><p>&emsp;&emsp;关于博客的搭建，网上教程一大堆，这里就不在赘述了。  博客搭建☞<a href="https://www.jianshu.com/p/956c44c87fb1" target="_blank">点我</a> </p>
+<h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a><strong>环境配置</strong></h3><p>&emsp;&emsp;配置环境用于搭建博客以及后续的优化和内容更新，需要注意的是去版本尽量去官网下载最新的，我上次更新博客失败，后来查到和git版本有关，更新了git版本后才更新成功。</p>
+<h3 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a><strong>Hexo安装</strong></h3><p>&emsp;&emsp;hexo是博客框架，在上述搭建好的环境中，将支持的类型的文件转换成静态Web页面发布博客。</p>
+<h3 id="GitHub仓库构建"><a href="#GitHub仓库构建" class="headerlink" title="GitHub仓库构建"></a><strong>GitHub仓库构建</strong></h3><p>&emsp;&emsp;创建GitHub仓库用于博客内容的寄存，博客内容是本地内容转换成Web页面后的内容。接着通过创建GitHub仓库的ssh key，它是连通本地内容和GitHub仓库的钥匙。在站点配置文件_config.yml（注意区分站点配置文件和主题配置文件）配置ssh key时注意区分输入的是博客注册邮箱还是博客的网址。</p>
+<h3 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a><strong>主题配置</strong></h3><p>&emsp;&emsp;博客搭建好了以后，就需要安装自己喜欢的主题了，安装主题的时候记得把默认的主题复制出来备份，如果自己下载的主题没有安装成功还可以把原来默认的主题再替换进去。  主题配置☞<a href="https://www.jianshu.com/p/469e985288b3?from=jiantop.com" target="_blank">点我</a> </p>
+<h3 id="主题优化"><a href="#主题优化" class="headerlink" title="主题优化"></a><strong>主题优化</strong></h3><p>&emsp;&emsp;下载的主题里面默认很多模块没有开启，或者很多东西你不需要，或者很多东西你要改变成自己喜欢的样式。<br>比如说【标签云】模块，【图册】模块，【时间】轴模块，【关于我】模块，【友情链】模块等，以及分享功能，评论系统，阅读量统计等。要求高的还可以自己添加音乐播放插件，可以动的看板萌妞小妹等。下面逐一说明。  </p>
+<h4 id="功能模块添加"><a href="#功能模块添加" class="headerlink" title="功能模块添加"></a><strong>功能模块添加</strong></h4><p>&emsp;&emsp;【标签云】模块，【图册】模块，【时间轴】模块，【关于我】模块，【友情链】模块都需要各自建一个页面，这一点是相同的，各自之间实现的方法不一样。  </p>
+<p>&emsp;&emsp;【关于我】模块是在建好的页面的文件夹里面直接写.md文件的，转换后是一篇博文的界面。  【关于我】教程☞<a href="https://baoyuzhang.github.io/2017/05/12/%E3%80%90Hexo%E6%90%AD%E5%BB%BA%E7%8B%AC%E7%AB%8B%E5%8D%9A%E5%AE%A2%E5%85%A8%E7%BA%AA%E5%BD%95%E3%80%91%EF%BC%88%E4%B8%89%EF%BC%89%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" target="_blank">点我</a>。<br> 其中，只需要看关于新建about部分的就可以了，可以触类旁通。无关的内容看多了会让你怀疑人生的(→_→）</p>
+<p>&emsp;&emsp;【图册】模块需要图片集成在你的相册页面里，实现方法有两种。一种是本地图片同步到GitHub仓库；另一种是靠图床获取外部链接实现（外部链接不同于网盘的分享链接）。还需要获取API拿到key。有的图床需要注册还要实名认证，我果断放弃了，国外的大都需要自建梯子出去。 PS:梯子，你懂的哈(→<em>→）。国外的ins的API马上要关闭了，目前在尝试flickr中，试了好久还是没有成功~ 此时我想起了一句名言：世上无难事，只要肯放弃(→</em>→）</p>
+<p>&emsp;&emsp;【时间轴】主题中包涵相关的功能，只要按教程开启就可以了。 </p>
+<p>&emsp;&emsp;【友情链】就不添加了，大神到处是，如果都加入到友情链，估计人口爆满，让人眼花缭乱，心旷神怡啊(→_→）　【友情链】教程，没有。</p>
+<p>&emsp;&emsp;分享功能，评论系统，阅读量统计等，在主题配置文件中开启就可以了。   </p>
+<p>&emsp;&emsp;以上的各个模块的怎么实现，看官☞<a href="http://www.360doc.com/content/17/0712/19/25356749_670867725.shtml" target="_blank">点我</a> </p>
+<p>最后，可以动的看板萌妞小妹，看起来好难，实际也很难，放个链接有兴趣自己钻研~ &emsp;&emsp;看官☞<a href="https://imjad.cn/archives/lab/add-dynamic-poster-girl-with-live2d-to-your-blog-01" target="_blank">点我</a>   </p>
+<h2 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a><strong>写博客</strong></h2><p>&emsp;&emsp;博客需要写了以后通过hexo命令发出去，写博客遵循的格式是<a href="http://xianbai.me/learn-md/index.html" target="_blank">markdown语言格式</a>，写作工具比较多，我用的是MarkdownPad2，可以预览效果。<br>关于发博客，看官☞<a href="http://blog.csdn.net/qq_36099238/article/details/54576089" target="_blank">点我</a>  </p>
+<h2 id="同步博客"><a href="#同步博客" class="headerlink" title="同步博客"></a><strong>同步博客</strong></h2><p>&emsp;&emsp;关于多设备同步博客，有需要的可以后续学习，如果电脑被偷了或者爆炸了，或者怀旧重新装了一个windowsXP的系统，这个同步博客的操作绝壁ひつよう啊~<br>&emsp;&emsp;关于多设备同步，看官☞<a href="https://www.zhihu.com/question/21193762" target="_blank">点我</a> </p>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a><strong>结束语</strong></h2><p>&emsp;&emsp;接触到了博客，发现博客还挺麻烦，但是会越来越好用，最终会成为我学习成长的工具之一，帮助我记录生活点滴，总结知识，共享成果。  </p>
+<p>&emsp;&emsp;以上です、質問があれば、メールで連絡してください。  </p>
+<p><img src="/posts_img/2.jpg" alt="">    </p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/03/11/suggestions of setting up the blog/">Hexo博客搭建注意事项</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Goku</a></p>
+        <p><span>发布时间:</span>2018-03-11, 20:05:00</p>
+        <p><span>最后更新:</span>2018-04-15, 11:23:21</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/03/11/suggestions of setting up the blog/" title="Hexo博客搭建注意事项">https://gookoo.github.io/2018/03/11/suggestions of setting up the blog/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://gookoo.github.io/2018/03/11/suggestions of setting up the blog/　　作者: Goku" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2018/04/15/how to search what you want/">
+                    如何提高搜索能力
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2018/03/03/My First Blog/">
+                    ブログを始めて書く記事
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo搭建思路"><span class="toc-number">2.</span> <span class="toc-text">Hexo搭建思路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#环境配置"><span class="toc-number">2.1.</span> <span class="toc-text">环境配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo安装"><span class="toc-number">2.2.</span> <span class="toc-text">Hexo安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GitHub仓库构建"><span class="toc-number">2.3.</span> <span class="toc-text">GitHub仓库构建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主题配置"><span class="toc-number">2.4.</span> <span class="toc-text">主题配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#主题优化"><span class="toc-number">2.5.</span> <span class="toc-text">主题优化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#功能模块添加"><span class="toc-number">2.5.1.</span> <span class="toc-text">功能模块添加</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写博客"><span class="toc-number">3.</span> <span class="toc-text">写博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#同步博客"><span class="toc-number">4.</span> <span class="toc-text">同步博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">5.</span> <span class="toc-text">结束语</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"Hexo博客搭建注意事项　| Gokuの博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+        <section id="comments">
+    <style> aside.comment-bar { margin: auto 30px; }</style>
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function(){
+            this.page.url = 'https://gookoo.github.io/2018/03/11/suggestions of setting up the blog/';
+            this.page.identifier = '2018/03/11/suggestions of setting up the blog/';
+        };
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = '//gookoo.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        }
+    </script>
+    
+    <script> loadComment(); </script>
+
+</section>
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2018/04/15/how to search what you want/" title="上一篇: 如何提高搜索能力">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2018/03/03/My First Blog/" title="下一篇: ブログを始めて書く記事">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/04/15/how to search what you want/">如何提高搜索能力</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/11/suggestions of setting up the blog/">Hexo博客搭建注意事项</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/03/My First Blog/">ブログを始めて書く記事</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/10/日本語講演大会/">キヤノン会社日本語しゃべれ音大会の発表記事</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2019 Goku
+            </div>
+            
+            
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 3;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+             title: "a.article-title, .article-more-link a", 
+             post: ".article-entry a[href], .copyright a[href]", 
+             tags: ".article-tag a", 
+             categories: ".article-category a, a.tag-list-link", 
+             articleNav: "#article-nav a, #post-nav-button a", 
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+            
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
