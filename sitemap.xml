@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gookoo.github.io/photos/data.json</loc>
+    
+    <lastmod>2019-05-04T09:01:12.820Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://gookoo.github.io/2018/03/03/My%20First%20Blog/</loc>
     
     <lastmod>2019-05-03T19:02:51.655Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://gookoo.github.io/2017/11/10/%E6%97%A5%E6%9C%AC%E8%AA%9E%E8%AC%9B%E6%BC%94%E5%A4%A7%E4%BC%9A/</loc>
     
     <lastmod>2019-05-03T18:51:05.539Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://gookoo.github.io/photos/data.json</loc>
-    
-    <lastmod>2018-11-27T13:11:37.000Z</lastmod>
     
   </url>
   
