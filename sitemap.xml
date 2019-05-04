@@ -30,16 +30,23 @@
   </url>
   
   <url>
-    <loc>https://gookoo.github.io/photos/ins.json</loc>
+    <loc>https://gookoo.github.io/photos/data.json</loc>
     
-    <lastmod>2018-10-20T16:19:05.065Z</lastmod>
+    <lastmod>2018-11-27T13:11:37.000Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://gookoo.github.io/photos/index.html</loc>
     
-    <lastmod>2018-10-20T15:55:35.939Z</lastmod>
+    <lastmod>2018-11-27T13:11:37.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://gookoo.github.io/photos/ins.json</loc>
+    
+    <lastmod>2018-10-20T16:19:05.065Z</lastmod>
     
   </url>
   
